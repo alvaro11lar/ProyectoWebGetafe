@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//let letra = document.getElementById('cajaLetrInsertada').value;
+	const palabra = "vaca";
+
+	function cogerLetra() {
+		return document.getElementById('cajaLetrInsertada').value;
+	}
+
+	function formatear() {
+		document.getElementById("cajaTexto1").value = "";
+		document.getElementById("cajaTexto2").value = "";
+		document.getElementById("cajaTexto3").value = "";
+		document.getElementById('cajaTexto4').value = "";
+		document.getElementById('palabraModificable').value = "";
+		document.getElementById("numeroIntentos").value = '6';
+		var texto = document.getElementById("numeroIntentos").textContent;
+		alert(texto)
+	}
+
+	function probar() {
+		var letraIntrodu = document.getElementById('cajaLetrInsertada').value;
+		alert(letraIntrodu)
+		const split = palabra.split('');
+		alert(split.length)
+		//var longitud = split.length;
+
+		for (let i = 0; i < split.length; i++) {
+			alert("aa")
+			if (letraIntrodu == split[i]) {
+				
+				var idTexto = 'cajaTexto' + (i + 1);
+				alert(idTexto)
+				document.getElementById(idTexto).value = letraIntrodu;
+			}
+		}
+		alert("sdsdsd")
+	}
+</script>
+</head>
+
+<body>
+	<h1>AHORCADO</h1>
+	<form id="form0">
+		<input id="cajaTexto1" type="text" readonly="readonly"> <input
+			id="cajaTexto2" type="text" readonly="readonly"> <input
+			id="cajaTexto3" type="text" readonly="readonly"> <input
+			id="cajaTexto4" type="text" readonly="readonly"> <br> <br>
+		Letra: <input id="cajaLetrInsertada" value = " " type="text"> <input
+			type="button" onclick="probar()" value="Probar"> <br> <input
+			type="button" onclick="formatear()" value="Reiniciar">
+		<h2 id="palabraModificable">Bien</h2>
+		Tienes
+		<p id="numeroIntentos">5</p>
+		oportunidades
+
+	</form>
+
+
+</body>
+</html>

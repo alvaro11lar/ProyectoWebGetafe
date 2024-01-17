@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Ejemplo de agrupación de controles en un formulario</title>
+<script type="text/javascript">
+	function enviar(){
+		nombre = document.getElementById("nombre").value;
+		alert(nombre)
+	}
+</script>
+
+</head>
+<body>
+	<form action="" method="post">
+		<fieldset>
+			<legend>Datos personales:</legend>
+			Campo de texto: <br> <input id="nombre" type="text" name="campo_de_texto">
+			<br>password: <br> <input id="password" type="password" name="password">
+			<button>
+				Hola esto es un <b>botón</b>
+				<br>
+
+				</button>
+		</fieldset>
+	
+	</form>
+</body>
+</html>

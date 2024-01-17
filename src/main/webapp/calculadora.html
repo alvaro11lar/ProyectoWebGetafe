@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo de agrupación de controles en un formulario</title>
+    <script type="text/javascript">
+        let resultadoActual = 0;
+        
+        function mostrarResultado() {
+            document.getElementById('resultado').value = resultadoActual;
+            alert("sdasdsa");
+        }
+        function recogerNumero() {
+            return parseFloat(document.getElementById('numero').value);
+        }
+        function sumar() {
+            alert("asdasds");
+            resultadoActual += recogerNumero();
+        }
+
+        function restar() {
+            alert("asdasds");
+            resultadoActual -= recogerNumero();
+        }
+
+        function multiplicar() {
+            resultadoActual *= recogerNumero();
+        }
+
+        function division() {
+            let numero = recogerNumero();
+            if (numero !== 0) {
+                resultadoActual /= numero;
+            } else {
+                alert("No se puede dividir por cero");
+            }
+        }
+       
+    </script>
+
+</head>
+
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Calculadora22</legend>
+            Numero <input id="numero" type="text" name="password">
+            <br>
+            Ressultado <input id="resultado" type="text" name="password" readonly>
+
+            <br>
+            <button type="button" id="suma" onclick="sumar()">
+                <b>+</b>
+            </button>
+            <button id="resta" onclick="restar()">
+                <b>-</b>
+            </button>
+            <button id="multiplicacion" onclick="multiplicar()">
+                <b>/</b>
+            </button>
+            <button id="division" onclick="division()">
+                <b>*</b>
+            </button>
+            <br>
+            <button id="mostrarResultado" onclick="mostrarResultado()">
+                <b>Resultado</b>
+            </button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
