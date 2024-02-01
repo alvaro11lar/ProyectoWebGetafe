@@ -4,4 +4,40 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+  	<servlet-name>ServletPrueba2</servlet-name>
+  	<display-name>ServletPrueba2</display-name>
+  	<description></description>
+  	<servlet-class>servlets.ServletPrueba</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FS</servlet-name>
+  	<display-name>FormularioServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlets.FormularioServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TablaAlumnosSrvlet</servlet-name>
+  	<display-name>TablaAlumnosSrvlet</display-name>
+  	<description></description>
+  	<servlet-class>servlets.TablaAlumnosSrvlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>ServletPrueba2</servlet-name>
+  	<url-pattern>/ServletPrueba2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FS</servlet-name>
+  	<url-pattern>/formulario</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FS</servlet-name>
+  	<url-pattern>/formulariotest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TablaAlumnosSrvlet</servlet-name>
+  	<url-pattern>/TablaAlumnosSrvlet</url-pattern>
+  </servlet-mapping>
 </web-app>
